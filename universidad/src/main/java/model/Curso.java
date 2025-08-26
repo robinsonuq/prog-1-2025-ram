@@ -135,10 +135,74 @@ public class Curso {
         return resultado;
     }
 
+    /**
+     * Este metodo pemrite eliminar un estudiante
+     * @param numeroIdentificacion
+     * @return
+     */
+    public String eliminarEstudiante(String numeroIdentificacion){
+        Estudiante estudianteEncontrado = null;
+
+        estudianteEncontrado = buscarEstudiante(numeroIdentificacion);
+
+        if(estudianteEncontrado != null){
+            listaEstudiantes.remove(estudianteEncontrado);
+            System.out.println("Estudiante eliminado exitosamente");
+            return "Estudiante eliminado exitosamente";
+        }else{
+            return "Estudiante no existe";
+        }
+
+    }
+
+    public String actualizarEstudiante(String numeroIdentificacion,Estudiante nuevaInformacion){
+        String resultado = "";
+        Estudiante estudianteEncontrado = null;
+
+        estudianteEncontrado = buscarEstudiante(numeroIdentificacion);
+        if(estudianteEncontrado != null){
+            estudianteEncontrado.setNombres(nuevaInformacion.getNombres());
+            resultado = "La informacion del estudiante fúe actualizada correctamente";
+        }else{
+            resultado = "El estudiante no existe";
+        }
+
+        return resultado;
+    }
 
 
+    public String actualizarEstudiante(String numeroIdentificacionActual,String nuevoNombre){
+        String resultado = "";
+        Estudiante estudianteEncontrado = null;
 
+        estudianteEncontrado = buscarEstudiante(numeroIdentificacionActual);
+        if(estudianteEncontrado != null){
+            estudianteEncontrado.setNombres(nuevoNombre);
+            resultado = "La informacion del estudiante fúe actualizada correctamente";
+        }else{
+            resultado = "El estudiante no existe";
+        }
 
+        return resultado;
+    }
+
+    public String actualizarEstudiante(String numeroIdentificacionActual,
+                                       String nuevoNombre,String nuevoApellido,String nuevoEmail){
+        String resultado = "";
+        Estudiante estudianteEncontrado = null;
+
+        estudianteEncontrado = buscarEstudiante(numeroIdentificacionActual);
+        if(estudianteEncontrado != null){
+            estudianteEncontrado.setNombres(nuevoNombre);
+            estudianteEncontrado.setApellidos(nuevoApellido);
+            estudianteEncontrado.setCorreo(nuevoEmail);
+            resultado = "La informacion del estudiante fúe actualizada correctamente";
+        }else{
+            resultado = "El estudiante no existe";
+        }
+
+        return resultado;
+    }
 
 
 
