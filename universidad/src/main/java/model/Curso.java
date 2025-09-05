@@ -210,6 +210,43 @@ public class Curso {
 
 
 
+    public Estudiante obtenerEsudianteMejor(){
+
+        for(Estudiante estudianteAux : listaEstudiantes){
+            if(estudianteAux.isMejor()){
+
+                return estudianteAux;
+            }
+        }
+        return null;
+
+    }
+
+    public  boolean aplicarDescuento(){
+
+        for(Estudiante estudianteAux : listaEstudiantes){
+            if(estudianteAux.isMejor()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public  boolean aplicarDescuento2(){
+
+        for(Estudiante estudianteAux : listaEstudiantes){
+            if(estudianteAux.isMejor()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+
+
+
+
 
 
 

@@ -72,4 +72,11 @@ public class Estudiante {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+
+    public boolean isMejor(){
+        if(edad <18 && notafinal > 4.5 && estrato == 1){
+            return true
+        }
+    }
 }
