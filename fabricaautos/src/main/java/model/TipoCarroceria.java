@@ -1,4 +1,4 @@
-package fabricaAutomviles.model;
+package model;
 
 public enum TipoCarroceria {
 
