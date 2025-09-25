@@ -1,82 +1,76 @@
 package model;
 
-public class Estudiante {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
-    private String nombres;
-    private String apellidos;
-    private String numeroIdentificacion;
-    private String correo;
-    private byte edad;
-    private String telefono;
-    private double[] notas;
+public abstract class Estudiante {
 
+    private String nombre;
+    private String id;
+    private String documentoIdentidad;
+    private String programa;
+    private int semestre;
+    List<Materia> listaMaterias;
 
-    public Estudiante(String nombres, String apellidos, String numeroIdentificacion,
-                      String correo, byte edad, String telefono) {
-
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.numeroIdentificacion = numeroIdentificacion;
-        this.correo = correo;
-        this.edad = edad;
-        this.telefono = telefono;
-        this.notas = new double[5];
-
+    public Estudiante(String id,String nombre, String documentoIdentidad, String programa, int semestre) {
+        this.id = Objects.requireNonNull(id,"Error no null");
+        this.nombre = Objects.requireNonNull(nombre,"Error no null");
+        this.documentoIdentidad = documentoIdentidad;
+        this.programa = programa;
+        this.semestre = semestre;
+        this.listaMaterias = new ArrayList<>();
     }
 
-    public String getNombres(){
-        return nombres;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombres(String nuevoNombres){
-        this.nombres = nuevoNombres;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-
-    public String getApellidos() {
-        return apellidos;
+    public String getId() {
+        return id;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getNumeroIdentificacion() {
-        return numeroIdentificacion;
+    public String getDocumentoIdentidad() {
+        return documentoIdentidad;
     }
 
-    public void setNumeroIdentificacion(String numeroIdentificacion) {
-        this.numeroIdentificacion = numeroIdentificacion;
+    public void setDocumentoIdentidad(String documentoIdentidad) {
+        this.documentoIdentidad = documentoIdentidad;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getPrograma() {
+        return programa;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setPrograma(String programa) {
+        this.programa = programa;
     }
 
-    public byte getEdad() {
-        return edad;
+    public int getSemestre() {
+        return semestre;
     }
 
-    public void setEdad(byte edad) {
-        this.edad = edad;
+    public void setSemestre(int semestre) {
+        this.semestre = semestre;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public List<Materia> getListaMaterias() {
+        return listaMaterias;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setListaMaterias(List<Materia> listaMaterias) {
+        this.listaMaterias = listaMaterias;
     }
 
-
-    public boolean isMejor(){
-        if(edad <18 && notafinal > 4.5 && estrato == 1){
-            return true
-        }
+    public void addMateria(Materia m) {
+        listaMaterias.add(m);
     }
 }
