@@ -10,8 +10,7 @@ public record Programa(String nombre, int creditos,
                        List<Profesor> listaProfesores,
                        List<Materia> listaMaterias,
                        List<Estudiante> listaEstudiantes) {
-
-
+    
     /**
      * Constructor
      *
@@ -268,6 +267,22 @@ public record Programa(String nombre, int creditos,
         Optional<Materia> om = buscarMateria(codigoMateria);
         return om.map(Materia::calcularHorasTotales).orElse(0);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
