@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="506.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.universidad.viewcontrollers.EstudianteController">
+   <children>
+      <SplitPane dividerPositions="0.6437246963562753" layoutX="7.0" layoutY="34.0" orientation="VERTICAL" prefHeight="462.0" prefWidth="451.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="466.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="14.0" text="Nombre :" />
+                  <TextField fx:id="txtNombre" layoutX="111.0" layoutY="10.0" prefHeight="25.0" prefWidth="302.0" />
+                  <Button layoutX="125.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="155.0" text="Guardar" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="466.0" />
+        </items>
+      </SplitPane>
+      <Label layoutX="151.0" layoutY="14.0" text="Gestión de Estudiantes" />
+   </children>
+</AnchorPane>
