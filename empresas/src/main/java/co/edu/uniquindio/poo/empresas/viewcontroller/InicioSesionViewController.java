@@ -76,5 +76,6 @@ public class InicioSesionViewController {
 
     public void setAplicacion(Aplicacion aplicacion) {
         this.aplicacion = aplicacion;
+        empresa = aplicacion.empresa;
     }
 }

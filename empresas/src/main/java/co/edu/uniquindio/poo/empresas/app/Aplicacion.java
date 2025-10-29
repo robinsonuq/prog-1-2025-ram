@@ -25,8 +25,8 @@ public class Aplicacion extends Application {
 
             try {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(Aplicacion.class.getResource("/co/edu/uniquindio/poo/empresa/inicio-sesion.fxml"));
-                javafx.scene.layout.VBox rootLayout = (javafx.scene.layout.VBox) loader.load();
+                loader.setLocation(Aplicacion.class.getResource("/co/edu/uniquindio/poo/empresas/inicio-sesion.fxml"));
+                javafx.scene.layout.AnchorPane rootLayout = (javafx.scene.layout.AnchorPane) loader.load();
 
                 InicioSesionViewController inicioSesionViewController = loader.getController();
                 inicioSesionViewController.setAplicacion(this);
