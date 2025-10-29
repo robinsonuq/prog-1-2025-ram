@@ -11,8 +11,7 @@ import co.edu.uniquindio.poo.empresas.app.Aplicacion;
 import co.edu.uniquindio.poo.empresas.model.Empresa;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class InicioSesionViewController {
 
@@ -48,10 +47,29 @@ public class InicioSesionViewController {
         if (validado) {
              empresa.validarUsuario(usuario,contrasenia);
         }else{
-            System.out.println("Los datos no son validos");
+            mostrarAlerta("Inicio de sesion","Inicio de Sesion","Datos Invalidos", Alert.AlertType.WARNING);
         }
 
     }
+
+    public void mostrarMensaje(){
+        Dialog<String> dialog = new Dialog<>();
+        dialog.setTitle("Mi diálogo");
+        dialog.setHeaderText("Mensaje personalizado");
+        dialog.setContentText("Contenido dentro del diálogo");
+
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        dialog.showAndWait();
+    }
+    public void mostrarAlerta(String titulo, String header, String contenido, Alert.AlertType alertType) {
+
+        Alert alert = new Alert(alertType);
+        alert.setTitle(titulo);
+        alert.setHeaderText(header);
+        alert.setContentText(contenido);
+        alert.showAndWait();
+    }
+
 
     private boolean validarDatos(String usuario, String contrasenia) {
 
