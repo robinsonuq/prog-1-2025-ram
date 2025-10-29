@@ -1,7 +1,7 @@
-package co.edu.uniquindio.poo.empresa.app;
+package co.edu.uniquindio.poo.empresas.app;
 
-import co.edu.uniquindio.poo.empresa.model.Empresa;
-import co.edu.uniquindio.poo.empresa.viewcontroller.InicioSesionViewController;
+import co.edu.uniquindio.poo.empresas.model.Empresa;
+import co.edu.uniquindio.poo.empresas.viewcontroller.InicioSesionViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

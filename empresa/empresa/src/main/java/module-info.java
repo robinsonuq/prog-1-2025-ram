@@ -8,4 +8,5 @@ module co.edu.uniquindio.poo.empresa {
 
     opens co.edu.uniquindio.poo.empresa to javafx.fxml;
     exports co.edu.uniquindio.poo.empresa;
+    exports co
 }
